@@ -7,11 +7,11 @@ Reviews play a vital role in the world today when someone decides what services 
 
 Clone the repository
 
-    git clone https://github.com/willypelz/fe.git
+    git clone https://github.com/willypelz/releaf-swe-clock-in-out-frontend.git
 
 Switch to the repo folder
 
-    cd fe
+    cd releaf-swe-clock-in-out-frontend
     
 Install dependencies
     
