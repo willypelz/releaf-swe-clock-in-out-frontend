@@ -16,6 +16,9 @@ export const comparer = (otherArray) => {
     }).length == 0;
   }
 };
+
+
+
 /*exporting all the utils function*/
 export default {
   redirectTo: comparer
