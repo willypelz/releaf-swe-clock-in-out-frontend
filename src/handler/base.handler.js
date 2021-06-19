@@ -40,7 +40,6 @@ class BaseHandler {
     }
 
     getWithBearer(res, bearer) {
-        // alert(bearer)
         return baseHandler.get(`${res}`, {
             headers: {'Authorization': 'Bearer ' + bearer},
         });
@@ -50,12 +49,12 @@ class BaseHandler {
         return baseHandler.put(`${res}/${slug}`, params);
     }
 
-    /* function put to replace records in company-review system*/
+    /* function put to replace records in staff system*/
     put(res, params) {
         return baseHandler.put(`${res}`, params);
     }
 
-    /* function delete to remove records in company-review system*/
+    /* function delete to remove records in staff system*/
     delete(res, params) {
         return baseHandler.delete(res, params);
     }
@@ -65,16 +64,16 @@ class BaseHandler {
         switch (type) {
             case 'GET':
                 promise = axios.get(url, {params: data});
-                break
+                break;
             case 'POST':
                 promise = axios.post(url, data);
-                break
+                break;
             case 'PUT':
                 promise = axios.put(url, data);
-                break
+                break;
             case 'DELETE':
                 promise = axios.delete(url, data);
-                break
+                break;
             default :
                 promise = axios.get(url, {params: data});
                 break
@@ -84,5 +83,5 @@ class BaseHandler {
 
 }
 
-/*exporting the company review system baseHandler as a module*/
+/*exporting the staff system baseHandler as a module*/
 export default BaseHandler;
