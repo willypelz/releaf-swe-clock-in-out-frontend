@@ -1,14 +1,8 @@
 <template>
   <div>
     <!-- Header -->
-    <div class="header bg-gradient-success py-7 py-lg-8 pt-lg-9">
-      <div class="separator separator-bottom separator-skew zindex-100">
-        <svg x="0" y="0" viewBox="0 0 2560 100" preserveAspectRatio="none" version="1.1"
-             xmlns="http://www.w3.org/2000/svg">
-          <polygon class="fill-default" points="2560 0 2560 100 0 100"></polygon>
-        </svg>
-      </div>
-    </div>
+    <div class="header py-7 py-lg-5 pt-lg-9"></div>
+
     <!-- Page content -->
     <b-container class="mt--8 pb-5">
       <!-- Table -->
@@ -17,20 +11,20 @@
           <b-card no-body class="bg-secondary border-0">
             <b-card-body class="px-lg-5 py-lg-5">
               <div class="text-center text-muted mb-4">
-               Register
+              Staff Registration
               </div>
               <validation-observer v-slot="{handleSubmit}" ref="formValidator">
                 <b-alert show dismissible variant="danger" v-if="errors">
-                  <span class="alert-text"><strong>Failed!</strong> {{errors.username}}!</span>
+                  <span class="alert-text"><strong>Failed!</strong> {{errors}}!</span>
                 </b-alert>
                 <b-form role="form" @submit.prevent="handleSubmit(onSubmit)">
                   <base-input alternative
                               class="mb-3"
                               prepend-icon="ni ni-hat-3"
-                              placeholder="Username"
-                              name="Username"
+                              placeholder="Name"
+                              name="name"
                               :rules="{required: true}"
-                              v-model="model.username">
+                              v-model="model.name">
                   </base-input>
 
                   <base-input alternative
@@ -41,18 +35,32 @@
                               :rules="{required: true, email: true}"
                               v-model="model.email">
                   </base-input>
-
                   <base-input alternative
                               class="mb-3"
-                              prepend-icon="ni ni-lock-circle-open"
-                              placeholder="password"
-                              type="password"
-                              name="Password"
-                              :rules="{required: true, min: 6}"
-                              v-model="model.password">
+                              prepend-icon="ni ni-email-83"
+                              placeholder="Phone Number"
+                              name="Phone Number "
+                              :rules="{required: true}"
+                              v-model="model.phone_number">
+                  </base-input>
+                  <base-input alternative
+                              class="mb-3"
+                              prepend-icon="ni ni-email-83"
+                              placeholder="Department"
+                              name="department"
+                              :rules="{required: true}"
+                              v-model="model.department">
+                  </base-input>
+                  <base-input alternative
+                              class="mb-3"
+                              prepend-icon="ni ni-email-83"
+                              placeholder="Address"
+                              name="Address"
+                              :rules="{required: true, min: 10}"
+                              v-model="model.address">
                   </base-input>
                   <div class="text-center">
-                    <b-button type="submit" variant="primary" class="mt-4">Create account</b-button>
+                    <base-button type="primary" native-type="submit"   class="mt-4">Create account</base-button>
                   </div>
                 </b-form>
               </validation-observer>
