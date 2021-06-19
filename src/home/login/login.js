@@ -13,9 +13,8 @@ export default {
       model: {
         email: '',
         password: '',
-        rememberMe: false
       },
-      errors: null
+      error: null
     }
   },
 
@@ -29,10 +28,9 @@ export default {
         .then((res) => {
           saveUserData(res.user);
           this.$router.push({name: 'home'})
-
           },
           (err) => {
-            this.errors = err.response.data.errors;
+            this.error = err.response.data.message;
           }
         );
     }
