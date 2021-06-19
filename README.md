@@ -1,7 +1,14 @@
 # Staff Clock in Out system.
-Reviews play a vital role in the world today when someone decides what services or product one want to consume.
+An application that consumes an API Client to ensure clock in and out of users
+
+1.  State Management: Vuex
+2.  Test-driven development(TDD): mocha(not fully completed)
+3.  Request validation: Joi
+4.  project dockerized (not fully completed);
+
 
 # Getting started
+System Clockin CLock out 
 
 ## Installation
 
