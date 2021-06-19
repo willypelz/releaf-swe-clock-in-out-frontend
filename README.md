@@ -47,5 +47,5 @@ this can be found in the static folder.
 
 -improve the UI
 -complete dockerization for the project
--refactor the code
+-refactor the code (i.e to use the centralize notification in the shared folder, et.c)
 -connect ci/cd and connect it to live server for easy test.
