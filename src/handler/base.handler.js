@@ -2,9 +2,7 @@ import axios from "axios";
 import {BASE_URL} from "../config";
 import {getUserData} from "../util/cache";
 
- if (getUserData()) {
-    axios.defaults.headers.common['Authorization'] = `Bearer ${getUserData().token}`;
-}
+
 
  const baseHandler = axios.create({
     baseURL: BASE_URL,
