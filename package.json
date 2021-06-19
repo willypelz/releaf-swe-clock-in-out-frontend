@@ -1,7 +1,7 @@
 {
-  "name": "company-review-system",
+  "name": "staff-clock-in-out-system",
   "author": "Asefon Michael Pelumi",
-  "description": "Company Review System",
+  "description": "Staff Review System",
   "version": "1.0.0",
   "private": true,
   "scripts": {
