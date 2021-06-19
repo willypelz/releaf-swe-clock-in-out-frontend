@@ -25,7 +25,7 @@ const actions = {
   },
 };
 
-/*exporting the mutation*/
+/* exporting the mutation */
 export const mutations = {
   [SET_USER](state, user) {
     state.user = user;
