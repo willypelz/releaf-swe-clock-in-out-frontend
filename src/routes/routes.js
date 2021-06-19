@@ -3,7 +3,7 @@ import HomeLayout from '@/home/layout/Layout.vue';
 const routes = [
   {
     path: '/',
-    redirect: 'companies',
+    redirect: 'staffs',
     component: HomeLayout,
     children: [
       {
@@ -14,17 +14,22 @@ const routes = [
       {
         path: '/home',
         name: 'home',
-        component: () => import( '../dashboard/shared/companies/Companies.vue')
+        component: () => import( '../dashboard/staffs/Staffs.vue')
       },
       {
-        path: '/companies',
-        name: 'companies',
-        component: () => import( '../dashboard/shared/companies/Companies.vue')
+        path: '/staffs',
+        name: 'staffs',
+        component: () => import( '../dashboard/staffs/Staffs.vue')
       },
       {
-        path: '/company/:slug',
-        name: 'company',
-        component: () => import( '../dashboard/shared/company/Company.vue')
+        path: '/staffs/:slug',
+        name: 'staff',
+        component: () => import( '../dashboard/staff/Staff.vue')
+      },
+      {
+        path: '/clock-in-out',
+        name: 'clockInOut',
+        component: () => import( '../dashboard/clock-in-out/ClockInOut.vue')
       },
       {
         path: '/register',
