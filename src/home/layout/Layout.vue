@@ -26,31 +26,37 @@
           </b-row>
         </div>
         <b-navbar-nav  class="align-items-lg-center ml-lg-auto">
-          <b-nav-item to="/">
+          <b-nav-item to="/" >
             <i class="ni ni-planet"></i>
-            <span class="nav-link-inner--text">Home</span>
+            <span class="nav-link-inner--text">Staffs</span>
           </b-nav-item>
-          <b-nav-item to="/register" v-if="!user">
-            <i class="ni ni-circle-08"></i>
-            <span class="nav-link-inner--text">Register</span>
+          <b-nav-item to="/clock-in-out" >
+            <i class="ni ni-planet"></i>
+            <span class="nav-link-inner--text">Clock In/Out</span>
           </b-nav-item>
-          <b-nav-item to="/login" v-if="!user">
-            <i class="ni ni-key-25"></i>
-            <span class="nav-link-inner--text">Login</span>
+<!--          <b-nav-item to="/login">-->
+<!--            <i class="ni ni-key-25"></i>-->
+<!--            <span class="nav-link-inner&#45;&#45;text">Login</span>-->
+<!--          </b-nav-item>-->
+          <b-nav-item to="/register" >
+            <i class="ni ni-planet"></i>
+            <span class="nav-link-inner--text">Reg Staff</span>
           </b-nav-item>
-          <b-nav-item to="/" v-if="user">
-            <i class="ni ni-circle-08"></i>
-            <span class="nav-link-inner--text">{{(userDetails) ? userDetails.username : user.username}}</span>
-          </b-nav-item>
-          <b-nav-item @click="logout" v-if="user">
-            <i class="ni ni-key-25"></i>
-            <span class="nav-link-inner--text">Logout</span>
-          </b-nav-item>
+<!--          <b-nav-item to="/" v-if="user">-->
+<!--            <i class="ni ni-circle-08"></i>-->
+<!--            <span class="nav-link-inner&#45;&#45;text">{{(userDetails) ? userDetails.username : user.username}}</span>-->
+<!--          </b-nav-item>-->
+<!--          <b-nav-item @click="logout" v-if="user">-->
+<!--            <i class="ni ni-key-25"></i>-->
+<!--            <span class="nav-link-inner&#45;&#45;text">Logout</span>-->
+<!--          </b-nav-item>-->
         </b-navbar-nav>
       </template>
     </base-nav>
 
     <div class="main-content">
+      <img src="../../assets/releaf-logo.png" class="m-3" alt="" width="65" height="65">
+
       <zoom-center-transition
         :duration="pageTransitionDuration"
         mode="out-in"

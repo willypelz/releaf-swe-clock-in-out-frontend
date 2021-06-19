@@ -10,10 +10,11 @@ export default {
   data() {
     return {
       model: {
-        username: '',
+        name: '',
         email: '',
-        password: '',
-        agree: false
+        phone_number: '',
+        department: '',
+        address: '',
       },
       errors: null
     }
@@ -24,10 +25,9 @@ export default {
       const payload = {...this.model};
       this.$store.dispatch(REGISTER_USER, payload)
         .then((res) => {
-            saveUserData(res.user);
             this.$router.push({name: 'home'})        },
           (err)=>{
-            this.errors = err.response.data.errors;
+            this.errors = err.response.data.message;
           });
     }
 

@@ -2,10 +2,10 @@ import BaseHandler from '../../handler/base.handler';
 
 class  UserProvider  extends BaseHandler {
 	register(payload) {
-		return this.post('/users',  payload)
+		return this.post('/staffs',  payload)
 	}
   login(payload) {
-    return this.post('/users/login',  payload)
+    return this.post('/auth/login',  payload)
   }
 }
 

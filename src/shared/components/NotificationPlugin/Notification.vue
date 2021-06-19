@@ -101,7 +101,7 @@
       },
       timeout: {
         type: Number,
-        default: 5000,
+        default: 200,
         validator: value => {
           return value >= 0;
         },
@@ -144,7 +144,7 @@
         return `alert-${this.type}`;
       },
       customPosition() {
-        let initialMargin = 20;
+        let initialMargin = 10;
         let alertHeight = this.elmHeight + 10;
         let sameAlertsCount = this.$notifications.state.filter(alert => {
           return (

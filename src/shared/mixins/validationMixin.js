@@ -23,6 +23,12 @@ export default {
                 // Password validation rules
                 passwordRequired: v => !!v || 'Password is required',
                 password: v => v.length >= 6 || 'password must not be less than 6 characters',
+
+                //Staff Id required,
+                staff_idRequired: v => !!v || 'Name is required',
+
+
+
             },
         }
     },

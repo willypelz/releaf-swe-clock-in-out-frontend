@@ -5,7 +5,7 @@ export const UserData = {
         return {
             user_id: null,
             role: '',
-            first_name: null,
+            name: null,
             email: null,
         }
     },
@@ -13,7 +13,7 @@ export const UserData = {
         const user = getUserData();
         if (user) {
             this.user_id = user.user_id;
-            this.first_name = user.first_name;
+            this.name = user.name;
             this.email = user.email;
         }
     }

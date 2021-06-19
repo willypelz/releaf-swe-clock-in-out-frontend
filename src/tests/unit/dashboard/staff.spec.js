@@ -1,18 +1,18 @@
 import {createLocalVue,shallowMount} from '@vue/test-utils';
-import Companies from '../../../dashboard/shared/companies/Companies.vue';
+import Staff from '../../../dashboard/staff/Staff.vue';
 import Vuex from "vuex";
 
 const localVue = createLocalVue();
 localVue.use(Vuex);
 
-describe("Companies", () => {
+describe("Staff", () => {
 
   let wrapper;
   let store;
   let actions;
 
   actions = {
-    Companies: jest.fn(),
+    Staff: jest.fn(),
 
   };
   store = new Vuex.Store({
@@ -20,7 +20,7 @@ describe("Companies", () => {
   });
 
   beforeEach(() => {
-    wrapper = shallowMount(Companies, {
+    wrapper = shallowMount(Staff, {
       store,
       localVue
     });
@@ -32,7 +32,7 @@ describe("Companies", () => {
 
   // lifecycle test
   it('has a data hook in the component', () => {
-    expect(typeof Companies.data).toBe('function')
+    expect(typeof Staff.data).toBe('function')
   });
 
 });
