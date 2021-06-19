@@ -1,4 +1,4 @@
-# Auto detect text files and perform LF normalization
+# Auto detect text files and perform LF normalizations
 *.scss linguist-language=Vue
 *.css linguist-language=Vue
 
