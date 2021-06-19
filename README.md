@@ -17,7 +17,9 @@ Install dependencies
     
     npm install
 
-
+Running the Application 
+    
+    npm run serve
 ----------
 
 ## Connection
@@ -28,14 +30,15 @@ For testing Ensure the backend is running on port 3000
     
 ----------
 
-### Set an admin for the application
-you can change the role of a user in the user table to admin so as to see the admin
-features on the clock in/out system.
+## Screenshots of the project
 
-the admin registration panel has not been done due to time constrain. 
- 
- 
- #BUG to fix
- 
-when you need to refresh the page to be able to create staff
- 
+this can be found in the static folder.
+    
+----------
+
+### Updates to be done
+
+-improve the UI
+-complete dockerization for the project
+-refactor the code
+-connect ci/cd and connect it to live server for easy test.
